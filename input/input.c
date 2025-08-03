@@ -16,6 +16,8 @@ int main(void)
     // Output the text
     printf("Hello %s\n", firstName); */
 
+    // nejde kdyz scanf pred fgets
+
     char fullName[30];
 
     printf("Type your full name: \n");
