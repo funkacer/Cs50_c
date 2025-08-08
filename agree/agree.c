@@ -2,23 +2,23 @@
 
 int main(void)
 {
-    char x;
+    char c;
 
     // Ask the user to type a character
     printf("Type a character and press enter: \n");
 
     // Get and save the character
-    scanf("%c", &x);
+    scanf("%c", &c);
 
     // Print the character
-    printf("Your character is: %c\n", x);
+    printf("Your character is: %c\n", c);
 
     // Use single quotes for char, use && for and
-    if (x == 'y' || x == 'Y')
+    if (c == 'y' || c == 'Y')
     {
         printf("You agree.\n");
     }
-    else if (x == 'n' || x == 'N')
+    else if (c == 'n' || c == 'N')
     {
         printf("You don't agree.\n");
     }
