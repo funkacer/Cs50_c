@@ -19,4 +19,5 @@ int main(void)
             break;
         }
     }
+    printf("Here's $%i.\n", dollars);
 }
