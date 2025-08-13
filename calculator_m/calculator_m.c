@@ -1,32 +1,17 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include <limits.h>
 
 int main(void)
 {
-    long long dollars = 1;
+    int dollars = 1;
     char line[256];
 
     while(true)
     {
-        printf("Tady je $%lli. Zdvojnásobit a dát to dalšímu člověku? (y/n) ", dollars);
-
-        if (fgets(line, sizeof(line), stdin) == NULL)
+        printf("Here's $%i. Double it and give it to the next person? ", dollars);
+        char c = fgets(line, sizeof(line), stdin)[0];
+        if ((c == 'y' || c == 'Y') && dollars != 0)
         {
-            // Chyba při čtení vstupu, ukončíme program
-            break;
-        }
-
-        char user_answer = line[0];
-
-        if ((user_answer == 'y' || user_answer == 'Y'))
-        {
-            // Ochrana proti přetečení
-            if (dollars > LLONG_MAX / 2)
-            {
-                printf("Oops! Dosáhli jsme maximální hodnoty. Končíme.\n");
-                break;
-            }
             dollars *= 2;
         }
         else
@@ -34,6 +19,4 @@ int main(void)
             break;
         }
     }
-    printf("Tak dobře, končíme. Měl jsi $%lli.\n", dollars);
-    return 0;
 }
