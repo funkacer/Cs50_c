@@ -42,21 +42,18 @@ int main(void)
         {
             printf(" %c", s[i]);
             printf(" %i,", s[i]);
-        }
-        
+        }   
     }
 
+    // to uppercase
     char *returned_str = get_upper(s);
-
     printf("%s", returned_str);
-
     free(returned_str);
-    
+
 }
 
 char * get_upper(char s[])
 {
-
     //char *uppers = s;
     char *uppers = malloc(strlen(s));
     for (int i = 0, n = strlen(s); i <= n; i++)
