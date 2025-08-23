@@ -48,7 +48,6 @@ int main(void)
 
     char *returned_str = get_upper(s);
 
-
     printf("%s", returned_str);
 
     free(returned_str);
