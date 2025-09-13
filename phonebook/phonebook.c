@@ -5,7 +5,6 @@ typedef struct
 {
     char *name;
     char *number;
-
 } person;
 
 
@@ -16,11 +15,11 @@ int main(void)
     people[0].name = "Jirka";
     people[0].number = "123-123-123";
 
-    people[1].name = "Jirka";
-    people[1].number = "123-123-123";
+    people[1].name = "Lucka";
+    people[1].number = "223-123-123";
 
-    people[2].name = "Jirka";
-    people[2].number = "123-123-123";
+    people[2].name = "Vojta";
+    people[2].number = "323-123-123";
 
     char s[30];
     printf("Name: ");
@@ -66,11 +65,11 @@ int main(void)
     if (found > 0)
     {
         printf("Found in %i step(s).\n", found);
+        printf("Phone of %s is %s.\n", people[found-1].name, people[found-1].number);
     } else
     {
         printf("Not found at all.\n");
     }
     //return 1;
-
     
 }
