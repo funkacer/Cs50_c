@@ -45,6 +45,8 @@ int main(void)
     printf("Guess string: ");
     fgets(s, sizeof(s), stdin);
 
+    // strcmp nefunguje primo, protoze s obsahuje znak ASCII 10 (ENTER)
+
     // ostranim 10, ale pridam '\0'
     char string[strlen(s)];
     for (int i = 0, n = strlen(s); i < n; i++) {
