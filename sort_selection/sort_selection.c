@@ -13,7 +13,6 @@ int main(void)
         {
             if (numbers[j] < numbers[min])
             {
-                min = numbers[j];
                 min = j;
             }
         }
