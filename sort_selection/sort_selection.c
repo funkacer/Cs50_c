@@ -2,12 +2,19 @@
 
 //O(n^2)
 
+//int numbers[] = {7, 2, 5, 4, 1, 6, 0, 3};
+int numbers[] = {7, 0, 5, 4, 1, 6, 2, 3};
+
 int main(void)
 {
-    int numbers[] = {7, 2, 5, 4, 1, 6, 0, 3};
-    //printf("%lu\n", sizeof(numbers));
     for (int i = 0; i < sizeof(numbers)/4; i++)
     {
+        printf("I=%d:\n", i);
+        for (int i = 0; i < sizeof(numbers)/4; i++)
+        {
+            printf("%d", numbers[i]);
+        }
+        printf("\n");
         int min = i;
         for (int j = i + 1; j < sizeof(numbers)/4; j++)
         {
@@ -23,8 +30,10 @@ int main(void)
             numbers[min] = temp;
         }
     }
+    printf("Final:\n");
     for (int i = 0; i < sizeof(numbers)/4; i++)
-    {
-        printf("%d\n", numbers[i]);
-    }
+        {
+            printf("%d", numbers[i]);
+        }
+    printf("\n");
 }
